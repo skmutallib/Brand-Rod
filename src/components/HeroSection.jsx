@@ -3,13 +3,14 @@ import { Button } from "@/components/ui/button";
 import Navbar from "./Navbar";
 import Stats from "./Stats";
 import Services from "./Services";
+import Testimonials from "./testimonials"
 
 const HeroSection = () => {
     return (
         <section className="h-screen">
             <Navbar />
             <div className="h-full flex flex-col items-center justify-center font-display">
-                <div className="mx-auto max-w-screen-xl flex flex-col items-center justify-center text-center py-8 px-4 lg:py-16 lg:px-12">
+                <div className="mx-auto max-w-screen-xl flex flex-col items-center justify-center text-center py-8 px-4 lg:py-16 lg:px-12 mt-30">
                     <div className="bg-zinc-700 rounded-full pl-1.5 pr-4 py-1.5 mb-2">
                         <p className="text-white font-light text-sm ">
                             <span className="bg-zinc-200 text-black px-2 py-0.5 mr-1 rounded-full">
@@ -52,6 +53,7 @@ const HeroSection = () => {
             </div>
             <Stats />
             <Services />
+            <Testimonials />
         </section>
     );
 };
