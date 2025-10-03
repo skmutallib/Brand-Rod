@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_3" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 190.82px;
+      }
+
+      .cls-1, .cls-2 {
+        font-family: TTFirsNeueTrl-Bold, 'TT Firs Neue Trl';
+        font-weight: 700;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        font-size: 193.23px;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-3" points="633.87 690.48 460.4 690.48 445.3 672.23 398.21 615.25 392.13 607.88 427.28 568.18 481.85 506.55 484.69 503.35 592.04 503.35 559.89 540.35 535.71 568.18 534.21 569.9 494.81 615.25 571.69 615.25 609.54 661.04 633.87 690.48"/>
+  <polygon class="cls-3" points="796.87 690.48 690.57 690.48 637.21 629.18 625.07 615.25 597.74 583.85 584.11 568.18 583.64 567.65 636.75 506.53 639.52 503.35 662.66 476.7 457.18 476.7 389.24 394.5 704.77 394.5 719.06 411.79 732.8 428.42 771.24 474.93 769.7 476.7 746.55 503.35 690.31 568.07 690.22 568.18 690.41 568.18 731.38 615.25 796.87 690.48"/>
+  <text class="cls-1" transform="translate(838.09 528.51) scale(1.05 1)"><tspan x="0" y="0">BRAND</tspan></text>
+  <text class="cls-2" transform="translate(837.62 690.62) scale(1.05 1)"><tspan x="0" y="0">ROD.</tspan></text>
+</svg>

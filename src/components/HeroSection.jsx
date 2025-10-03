@@ -1,24 +1,54 @@
-import React from 'react'
+import LogoCloud from "./LogoCloud";
+import { Button } from "@/components/ui/button";
+import Navbar from "./Navbar";
 
-const HeroSection = ({headLine, subHeadLine, ctaText}) => {
- 
-
-  return (
-    /* <div className='relative bg-black flex flex-col items-center h-screen'>
-        <h1 className='absolute text-6xl font-extrabold text-center top-10% text-white w-[60%]'>{headLine}</h1>
-        <h2>{subHeadLine}</h2>
-    </div> */
-    <section className='bg-black'>
-        <div className='h-screen mx-auto max-w-screen-xl flex flex-col items-center justify-center text-center py-8 px-4 lg:py-16 lg:px-12'>
-            <a href="#" className=''></a>
-            <h1 className='w-[70%] text-4xl font-extrabold  text-white md:text-5xl lg:text-6xl'>We help remarkable Business growth online</h1>
-            <p className='text-lg mt-6 font-normal text-gray-500 lg:text-lg sm:px-16 xl:px-48'>At Brandrod, we harness creativity, data, and technology to help businesses grow their digital presence, unlock new opportunities, and achieve lasting impact online.</p>
-            <div>
-                <button className='text-white px-6 py-2 text-xl rounded-full bg-[#53469e] mt-5 shadow-inner shadow-white/50 '>Book a call</button>
+const HeroSection = ({ headLine, subHeadLine, ctaText }) => {
+    return (
+        <section className="h-screen">
+            <Navbar />
+            <div className="h-full flex flex-col items-center justify-center font-display">
+                <div className="mx-auto max-w-screen-xl flex flex-col items-center justify-center text-center py-8 px-4 lg:py-16 lg:px-12">
+                    <div className="bg-zinc-700 rounded-full pl-1.5 pr-4 py-1.5 mb-2">
+                        <p className="text-white font-light text-sm ">
+                            <span className="bg-zinc-200 text-black px-2 py-0.5 mr-1 rounded-full">
+                               <i class="fa fa-circle -translate-y-0.5" style={{fontSize : "7px"}} aria-hidden="true"></i> New
+                            </span>
+                            Client onboarding this Month
+                        </p>
+                    </div>
+                    <h1 className="mx-auto max-w-3xl text-4xl font-extrabold text-white leading-tight md:text-5xl lg:text-6xl">
+                        We help remarkable Business growth online
+                    </h1>
+                    <p className="text-lg mt-6 font-normal text-gray-500 lg:text-lg sm:px-16 xl:px-48">
+                        At Brandrod, we harness creativity, data, and technology to help
+                        businesses grow their digital presence, unlock new opportunities,
+                        and achieve lasting impact online.
+                    </p>
+                    <div className="mt-10 flex flex-wrap justify-center gap-4">
+                        <Button
+                            asChild
+                            size="lg"
+                            className="bg-white text-black hover:bg-gray-200"
+                        >
+                            <a href="/">
+                                <span>Get Started</span>
+                            </a>
+                        </Button>
+                        <Button
+                            asChild
+                            size="lg"
+                            className="bg-black text-white hover:bg-gray-800 rounded-full border"
+                        >
+                            <a href="/">
+                                <span>Book a call</span>
+                            </a>
+                        </Button>
+                    </div>
+                </div>
+                <LogoCloud />
             </div>
-        </div>
-    </section>
-  )
-}
+        </section>
+    );
+};
 
-export default HeroSection
+export default HeroSection;
