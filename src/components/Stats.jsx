@@ -2,7 +2,7 @@ import React from 'react'
 
 const Stats = () => {
   return (
-    <div className='text-white flex flex-col items-center leading-10 text-center h-fit bg-black'>
+    <div className='text-white flex flex-col items-center font-display leading-10 text-center h-fit bg-black'>
         <h1 className='text-5xl font-bold'>Brandrod in Numbers</h1>
         <p className='text-lg mt-3'>Driving results that speak for themselves.</p>
       <dl className='grid grid-cols-3 gap-x-30 items-center text-center mt-20' >

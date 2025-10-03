@@ -2,6 +2,7 @@ import LogoCloud from "./LogoCloud";
 import { Button } from "@/components/ui/button";
 import Navbar from "./Navbar";
 import Stats from "./Stats";
+import Services from "./Services";
 
 const HeroSection = () => {
     return (
@@ -50,6 +51,7 @@ const HeroSection = () => {
                 
             </div>
             <Stats />
+            <Services />
         </section>
     );
 };
