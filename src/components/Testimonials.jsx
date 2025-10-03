@@ -89,37 +89,95 @@ const testimonialChunks = chunkArray(Testimonials, Math.ceil(Testimonials.length
 export default function WallOfLoveSection() {
     return (
         <section className="bg-black text-white">
-            <div className="py-16 md:py-32">
+            <style>{`
+                @keyframes marquee-vertical {
+                    0% {
+                        transform: translateY(0);
+                    }
+                    100% {
+                        transform: translateY(-100%);
+                    }
+                }
+                .animate-marquee-vertical {
+                    animation: marquee-vertical 30s linear infinite;
+                }
+            `}</style>
+            <div className="py-16 md:py-12">
                 <div className="mx-auto max-w-6xl px-6">
                     <div className="text-center">
                         <h2 className="text-3xl font-semibold">Loved by the Community</h2>
                         <p className="mt-6 text-zinc-400">Harum quae dolore orrupti aut temporibus ariatur.</p>
                     </div>
-                    <div className="mt-8 grid gap-3 sm:grid-cols-2 md:mt-12 lg:grid-cols-3">
-                        {testimonialChunks.map((chunk, chunkIndex) => (
-                            <div key={chunkIndex} className="space-y-3">
-                                {chunk.map(({ name, role, quote, image }, index) => (
-                                    <Card key={index} className="bg-zinc-900 border-zinc-800">
-                                        <CardContent className="grid grid-cols-[auto_1fr] gap-3 pt-6">
-                                            <Avatar className="size-9">
-                                                <AvatarImage alt={name} src={image} loading="lazy" width="120" height="120" />
-                                                <AvatarFallback>ST</AvatarFallback>
-                                            </Avatar>
 
-                                            <div>
-                                                <h3 className="font-medium text-white">{name}</h3>
+                    {/* Marquee container with blur effects */}
+                    <div className="relative mt-8 md:mt-12 h-[600px] overflow-hidden">
+                        {/* Top blur effect */}
+                        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black to-transparent z-10 pointer-events-none"></div>
 
-                                                <span className="text-muted-foreground block text-sm tracking-wide">{role}</span>
+                        {/* Bottom blur effect */}
+                        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none"></div>
 
-                                                <blockquote className="mt-3">
-                                                    <p className="text-zinc-300">{quote}</p>
-                                                </blockquote>
-                                            </div>
-                                        </CardContent>
-                                    </Card>
-                                ))}
-                            </div>
-                        ))}
+                        {/* Scrolling content */}
+                        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                            {testimonialChunks.map((chunk, chunkIndex) => (
+                                <div key={chunkIndex} className="relative">
+                                    {/* Original content - animated */}
+                                    <div
+                                        className="space-y-3 animate-marquee-vertical"
+                                        style={{
+                                            animationDelay: `${chunkIndex * 2}s`
+                                        }}
+                                    >
+                                        {chunk.map(({ name, role, quote, image }, index) => (
+                                            <Card key={index} className="bg-transparent border-zinc-800 shadow-none">
+                                                <CardContent className="grid grid-cols-[auto_1fr] gap-4 pt-6">
+                                                    <Avatar className="size-9">
+                                                        <AvatarImage alt={name} src={image} loading="lazy" width="120" height="120" />
+                                                        <AvatarFallback>ST</AvatarFallback>
+                                                    </Avatar>
+
+                                                    <div>
+                                                        <h3 className="font-medium text-white">{name}</h3>
+                                                        <span className="text-muted-foreground block text-sm tracking-wide">{role}</span>
+                                                        <blockquote className="mt-3">
+                                                            <p className="text-zinc-300">{quote}</p>
+                                                        </blockquote>
+                                                    </div>
+                                                </CardContent>
+                                            </Card>
+                                        ))}
+                                    </div>
+
+                                    {/* Duplicate for seamless loop */}
+                                    <div
+                                        className="space-y-3 animate-marquee-vertical"
+                                        style={{
+                                            animationDelay: `${chunkIndex * 2}s`
+                                        }}
+                                        aria-hidden="true"
+                                    >
+                                        {chunk.map(({ name, role, quote, image }, index) => (
+                                            <Card key={`dup-${index}`} className="bg-transparent border-zinc-800 shadow-none">
+                                                <CardContent className="grid grid-cols-[auto_1fr] gap-4 pt-6">
+                                                    <Avatar className="size-9">
+                                                        <AvatarImage alt={name} src={image} loading="lazy" width="120" height="120" />
+                                                        <AvatarFallback>ST</AvatarFallback>
+                                                    </Avatar>
+
+                                                    <div>
+                                                        <h3 className="font-medium text-white">{name}</h3>
+                                                        <span className="text-muted-foreground block text-sm tracking-wide">{role}</span>
+                                                        <blockquote className="mt-3">
+                                                            <p className="text-zinc-300">{quote}</p>
+                                                        </blockquote>
+                                                    </div>
+                                                </CardContent>
+                                            </Card>
+                                        ))}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

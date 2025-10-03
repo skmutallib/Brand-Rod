@@ -4,6 +4,8 @@ import Navbar from "./Navbar";
 import Stats from "./Stats";
 import Services from "./Services";
 import Testimonials from "./testimonials"
+import Faqs from "./Faqs";
+import FooterSection from "./FooterSection";
 
 const HeroSection = () => {
     return (
@@ -54,6 +56,8 @@ const HeroSection = () => {
             <Stats />
             <Services />
             <Testimonials />
+            <Faqs />
+            <FooterSection />
         </section>
     );
 };
