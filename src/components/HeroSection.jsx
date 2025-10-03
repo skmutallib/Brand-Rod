@@ -2,7 +2,7 @@ import LogoCloud from "./LogoCloud";
 import { Button } from "@/components/ui/button";
 import Navbar from "./Navbar";
 
-const HeroSection = ({ headLine, subHeadLine, ctaText }) => {
+const HeroSection = () => {
     return (
         <section className="h-screen">
             <Navbar />
@@ -11,7 +11,7 @@ const HeroSection = ({ headLine, subHeadLine, ctaText }) => {
                     <div className="bg-zinc-700 rounded-full pl-1.5 pr-4 py-1.5 mb-2">
                         <p className="text-white font-light text-sm ">
                             <span className="bg-zinc-200 text-black px-2 py-0.5 mr-1 rounded-full">
-                               <i class="fa fa-circle -translate-y-0.5" style={{fontSize : "7px"}} aria-hidden="true"></i> New
+                                <i className="fa fa-circle -translate-y-0.5" style={{ fontSize: "7px" }} aria-hidden="true"></i> New
                             </span>
                             Client onboarding this Month
                         </p>
